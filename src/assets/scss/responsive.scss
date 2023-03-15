@@ -1,0 +1,74 @@
+@import "variables";
+
+/* Au niveau le plus haut du code */
+@media screen and (max-width: 900px) {
+    nav {
+
+        #openBtn, #closeBtn {
+            display: block !important;
+        }
+
+        #openBtn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 36px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .active{
+            right: 0px !important;
+        }
+
+        .close {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+        }
+      /* Sidenav menu */
+        .sidenav {
+            height: 200px;
+            width: 150px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: -150px;
+            background-color: $background-color;
+            padding-top: 60px;
+            transition: right 0.5s ease;
+
+            ul {
+                list-style-type: none;
+                text-align: center;
+                position: initial;
+                justify-content: space-between;
+                li{
+                    margin: 10px 0 0 0;
+                    display: block;
+                    color: $secondary-color;
+                }
+            }
+
+            a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                transition: 0.3s;
+
+                :hover{
+                    color: #111;
+                }
+            }
+        }
+    }
+    .burger-icon span {
+        display: block;
+        width: 35px;
+        height: 5px;
+        background-color: $secondary-color;
+        margin: 6px 0;
+    }
+}

@@ -7,7 +7,8 @@
   "author": "ddolmazon <ddolmazon@monkeyfactory.fr>",
   "license": "MIT",
   "scripts": {
-    "dev": "gulp watch"
+    "dev": "gulp watch",
+    "minify": "gulp default"
   },
   "dependencies": {
     "browser-sync": "^2.28.3",

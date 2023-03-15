@@ -7,7 +7,8 @@ const rename = require('gulp-rename');
 const browserSync = require('browser-sync').create();
 
 gulp.task('min-js', function() {
-    return gulp.src('src/assets/js/script.js')
+    return gulp.src('src/assets/js/*.js')
+        .pipe(concat('all.js'))
         .pipe(minify({
             ext: {
                 min: '.min.js'

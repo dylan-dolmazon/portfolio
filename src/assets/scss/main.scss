@@ -1,6 +1,123 @@
-h1 {
-    color: red;
-    &::after{
-        color: blue;
+@import "variables";
+
+body {
+
+    position: relative;
+    padding: 0;
+    margin: 0;
+
+    // modifier l'opacité du header lors du scroll
+    .scrolled {
+        opacity: 0.96;
+
+        h2{
+            color: $primary-color;
+        }
+
+    }
+
+    header{
+        width: 100%;
+        color: $secondary-color;
+        background-color: $background-color;
+        position: fixed;
+        top: 0;
+
+        h2{
+            width: fit-content;
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        // design navbar screen > 950px
+        nav{
+            display: inline-block;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            font-size: 16px;
+    
+            a{
+                display: none;
+            }
+
+            ul {
+                position: absolute;
+                right: 10px;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+    
+                li {
+                display: inline-block;
+                margin-left: 30px;
+                }
+            }
+        }
+    }
+
+    // design partie home
+    #home{
+        display: flex;
+        align-items: center;
+        height: 700px;
+        background-color: $background-color;
+        color: $secondary-color;
+
+        .container{
+            max-width: 540px;
+            margin-left: auto;
+            margin-right: auto;
+
+            // text avec text ecriture dynamique à utiliser avec le fichier js text-animation.js
+            .description{
+                font-size: 25px;
+                font-weight: 700;
+                line-height: 40px;
+    
+                h3{
+                    color: $primary-color;
+                }
+        
+                .typewrite{
+                    text-decoration: none;
+                }
+        
+                .wrap{
+                    color: $primary-color;
+                }
+            }
+
+            // block text de description de la home
+            .content{
+                color: $third-color;
+                margin: 25px 0 40px;
+                font-size: 18px;
+                line-height: 1.8;
+                font-weight: 400;
+            }
+
+            // bouton de la home
+            .links{
+
+                button{
+                    background-color: $primary-color;
+                    color: $secondary-color;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    margin-right: 10px;
+                }
+
+            }
+
+        }
     }
 }
