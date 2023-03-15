@@ -1,0 +1,13 @@
+# Gulp
+node_modules/
+dist/
+temp/
+.cache/
+*.log
+
+# Yarn
+yarn-error.log
+yarn.lock
+
+# Other
+.DS_Store
