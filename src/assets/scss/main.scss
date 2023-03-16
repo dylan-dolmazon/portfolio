@@ -1,5 +1,50 @@
 @import "variables";
 
+/* all transitions */
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
 body {
 
     position: relative;
@@ -9,9 +54,10 @@ body {
     // modifier l'opacité du header lors du scroll
     .scrolled {
         opacity: 0.96;
+        z-index: 99;
 
         h2{
-            color: $primary-color;
+            color: $fourth-color;
         }
 
     }
@@ -68,9 +114,19 @@ body {
         color: $secondary-color;
 
         .container{
+            display: flex;
             max-width: 540px;
             margin-left: auto;
             margin-right: auto;
+            padding: 20px;
+
+            #left{
+                width: 100%;
+            }
+
+            #right{
+                display: none;
+            }
 
             // text avec text ecriture dynamique à utiliser avec le fichier js text-animation.js
             .description{
@@ -84,6 +140,7 @@ body {
         
                 .typewrite{
                     text-decoration: none;
+                    padding-left: 5px;
                 }
         
                 .wrap{
@@ -99,25 +156,92 @@ body {
                 line-height: 1.8;
                 font-weight: 400;
             }
-
-            // bouton de la home
-            .links{
-
-                button{
-                    background-color: $primary-color;
-                    color: $secondary-color;
-                    border: none;
-                    padding: 10px 20px;
-                    border-radius: 5px;
-                    font-size: 16px;
-                    font-weight: 700;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-                    margin-right: 10px;
-                }
-
+            
+            // animation bouton de la home visible 
+            .btn-show{
+                transform: translateY(50px);
+                opacity: 0;
+                animation: fadeInUp 1s ease-in-out forwards;
             }
 
+            // animation bouton de la home caché
+            .btn-hide{
+                transform: translateY(0);
+                opacity: 1;
+                animation: fadeInDown 1s ease-in-out forwards;
+            }
+
+            .links {
+
+                a.btn {
+
+                  display: inline-block;
+                  padding: 1rem 1rem;
+                  font-size: 1rem;
+                  font-weight: 500;
+                  text-decoration: none;
+                  color: #fff;
+                  background-color: $background-color;
+                  border: 1px solid $primary-color;
+                  border-radius: 4px;
+                  position: relative;
+                  z-index: 1;
+                  margin-right: 1.5rem;
+
+                  &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0%;
+                    height: 100%;
+                    background-color: $primary-color;
+                    border-radius: 4px;
+                    transition: width 0.3s ease-in-out;
+                    z-index: -1;
+                  }
+                  &:hover {
+                    color: $background-color;
+                    &::before {
+                      width: 100%;
+                    }
+                  }
+                }
+            }
+
+            // animation social media visible
+            .social-hide{
+                transform: translateX(0);
+                opacity: 1;
+                animation: fadeInLeft 1s ease-in-out forwards 0.3s;
+            }
+
+            // animation social media caché
+            .social-show{
+                transform: translateX(50px);
+                opacity: 0;
+                animation: fadeInRight 1s ease-in-out forwards 0.3s;
+            }
+
+            .social{
+                margin-top: 30px;
+                .icon-social{
+                    width: 30px;
+                    height: 30px;
+                    padding: 10px;
+                    border-radius: 50%;
+                    border: $background-color 1px solid;
+                    background-color: $primary-color;
+                    color: $third-color;
+                    margin-right: 1.5rem;
+
+                    &:hover{
+                        cursor: pointer;
+                        background-color: $background-color;
+                        border: $primary-color 1px solid;
+                    }
+                }
+            }
         }
     }
 }

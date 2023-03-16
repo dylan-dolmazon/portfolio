@@ -1,0 +1,29 @@
+@import "variables";
+
+/* Au niveau le plus haut du code */
+@media screen and (750px <= width <= 950px) {
+
+    .container{
+        max-width: 720px !important;
+    }
+
+    #left{
+        display: inline-block !important;
+        width: 50% !important;
+    }
+    
+    #right{
+        display: inline-block !important;
+        width: 36% ;
+        height: 8%;
+        margin: auto;
+        img{
+            padding: 10px;
+            border: $primary-color 10px solid;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    }
+}
+
