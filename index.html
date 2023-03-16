@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="dist/css/all.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sono"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -37,7 +38,7 @@
     <main>
         <section id="home">
             <div class="container">
-                <div id="left">
+                <div id="home-left">
                     <div class="description">
                         <h3>Hello, I'm</h3>
                         <h4>
@@ -53,24 +54,105 @@
                         </p>
                     </div>
                     <div class="informations">
-                        <div class="links">
+                        <div class="links aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
                             <a href="#" class="btn">Contactez moi</a>
                             <a href="#" class="btn">Téléchargez mon Cv</a>
                         </div>
-                        <div class="social">
+                        <div class="social aos-init aos-animate" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
                             <a><img class="icon-social" src="dist/img/linkedin.svg" alt="logo linkedin"></a>
                             <a><img class="icon-social" src="dist/img/github.svg" alt="logo github"></a>
                             <a><img class="icon-social" src="dist/img/phone-solid.svg" alt="logo phone"></a>
                         </div>
                     </div>
                 </div>
-                <div id="right">
+                <div id="home-right">
                     <img src="dist/img/img_profile.png" alt="photo de profil">
                 </div>
             </div>
         </section>
-        <section id="about" style="height: 1500px">
-            <h1>A propos</h1>
+        <section id="about">
+            <div class="container">
+                <div class="about-left">
+                    <img class="aos-init aos-animate" data-aos="fade-right" data-aos-duration="1000" src="dist/img/about.png" alt="image de dylan about"></img>
+                </div>
+                <div class="about-right">
+                    <h2 class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">about me</h2>
+                    <p class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000" id="about-context">Bonjour je suis Dylan Dolmazon developpeur web front-end</p>
+                    <p class="aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">I'm a expert Web design and Web development focused on clean & user-friendly experiences, I am experiences about building excellent Websites that improves the lives of those around me.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="about-skills">
+                        <div id="skills-top">
+                            <div class="top-left-skill aos-animate aos-animate" data-aos="fade-up" data-aos-duration="1000">
+                                <h5>Base de données</h5>
+                                <div class="progressbar-wrapper">
+                                    <div title="level" class="progressbar bdd">60%</div>
+                                </div>
+                            </div>
+                            <div class="top-right-skill aos-animate aos-animate" data-aos="fade-up" data-aos-duration="1000">
+                                <h5>Php</h5>
+                                <div class="progressbar-wrapper">
+                                    <div title="level" class="progressbar php">80%</div>
+                                </div>  
+                            </div>
+                        </div>
+                        <div id="skills-bottom">
+                            <div class="bottom-left-skill aos-animate aos-animate" data-aos="fade-up" data-aos-duration="1000">
+                                <h5>Javascript / Typescript</h5>
+                                <div class="progressbar-wrapper">
+                                    <div title="level" class="progressbar js">90%</div>
+                                </div>
+                            </div>
+                            <div class="bottom-right-skill aos-animate aos-animate" data-aos="fade-up" data-aos-duration="1000">
+                                <h5>Html - css - scss</h5>
+                                <div class="progressbar-wrapper" >
+                                    <div title="level" class="progressbar html">75%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-resume">
+                        <div class="about-resume-top aos-animate aos-animate" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="about-resume-content">
+                                <div class="content-border">
+                                    <h5>+ 20</h5>
+                                    <p>Projets menés à bien</p>
+                                </div>
+                                <div class="content-img">
+                                    <img src="dist/img/desktop-solid.svg" alt="logo desktop">
+                                </div>
+                            </div>
+                            <div class="about-resume-content">
+                                <div class="content-border">
+                                    <h5>10</h5>
+                                    <p>Langages différents</p>
+                                </div>
+                                <div class="content-img">
+                                    <img src="dist/img/laptop-code-solid.svg" alt="logo laptop code">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-resume-bottom aos-animate aos-animate" data-aos="fade-up" data-aos-duration="1000">
+                            <div class="about-resume-content">
+                                <div class="content-border">
+                                    <h5>1</h5>
+                                    <p>Expérience en entreprise</p>
+                                </div>
+                                <div class="content-img">
+                                    <img src="dist/img/building-user-solid.svg" alt="logo building with user">
+                                </div>
+                            </div>
+                            <div class="about-resume-content">
+                                <div class="content-border">
+                                    <h5>0</h5>
+                                    <p>Test mais il faut 2 lignes</p>
+                                </div>
+                                <div class="content-img">
+                                    <img src="dist/img/temp.svg" alt="logo temp">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="skills">
             <h1>Compétences</h1>
@@ -85,4 +167,8 @@
 
 </body>
 <script src="dist/js/all.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
 </html>

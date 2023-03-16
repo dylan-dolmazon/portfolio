@@ -1,50 +1,5 @@
 @import "variables";
 
-/* all transitions */
-@keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    to {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-}
-
-@keyframes fadeInLeft {
-    from {
-      opacity: 1;
-      transform: translateX(0);
-    }
-    to {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-}
-
-@keyframes fadeInRight {
-    from {
-      opacity: 0;
-      transform: translateX(50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-}
-
 body {
 
     position: relative;
@@ -105,26 +60,29 @@ body {
         }
     }
 
+    .container{
+        max-width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+    }
     // design partie home
     #home{
+        height: 800px;
         display: flex;
         align-items: center;
-        height: 700px;
         background-color: $background-color;
         color: $secondary-color;
 
         .container{
-            display: flex;
-            max-width: 540px;
-            margin-left: auto;
-            margin-right: auto;
-            padding: 20px;
 
-            #left{
+            display: flex;
+
+            #home-left{
                 width: 100%;
             }
 
-            #right{
+            #home-right{
                 display: none;
             }
 
@@ -155,20 +113,6 @@ body {
                 font-size: 18px;
                 line-height: 1.8;
                 font-weight: 400;
-            }
-            
-            // animation bouton de la home visible 
-            .btn-show{
-                transform: translateY(50px);
-                opacity: 0;
-                animation: fadeInUp 1s ease-in-out forwards;
-            }
-
-            // animation bouton de la home caché
-            .btn-hide{
-                transform: translateY(0);
-                opacity: 1;
-                animation: fadeInDown 1s ease-in-out forwards;
             }
 
             .links {
@@ -209,20 +153,6 @@ body {
                 }
             }
 
-            // animation social media visible
-            .social-hide{
-                transform: translateX(0);
-                opacity: 1;
-                animation: fadeInLeft 1s ease-in-out forwards 0.3s;
-            }
-
-            // animation social media caché
-            .social-show{
-                transform: translateX(50px);
-                opacity: 0;
-                animation: fadeInRight 1s ease-in-out forwards 0.3s;
-            }
-
             .social{
                 margin-top: 30px;
                 .icon-social{
@@ -240,6 +170,155 @@ body {
                         background-color: $background-color;
                         border: $primary-color 1px solid;
                     }
+                }
+            }
+        }
+    }
+
+    #about{
+        .container{
+            .about-left{
+                display: block;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .about-right{
+                display: block;
+
+                h2{
+                    color: $primary-color;
+                    text-transform: uppercase;
+                    font-size: 40px;
+                }
+
+                #about-context{
+                    color: $background-color;
+                    font-size: 25px;
+                }
+
+                p{
+                    line-height: 30px;
+                    color: $background-color;
+                }
+
+                .top-left-skill, .top-right-skill{
+                    width: 100%;              
+                }
+
+                .about-skills{
+
+                    margin-bottom: 50px;
+
+                    h5{
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: $background-color;
+                        margin-bottom: 0.5rem;
+                    }
+                }
+
+                .php{
+                    width: 80%;
+                }
+
+                .bdd {
+                    width: 60%;
+                }
+
+                .js{
+                    width: 90%;
+                }
+
+                .html{
+                    width: 75%;
+                }
+
+                .progressbar-wrapper {
+                    background-color: $progress-background;
+                    color: white;
+                    border-right: 1px;
+                    border-radius: 0.375rem;;
+                    width: 100%;
+                    height: 100%;
+                  }
+                  
+                  .progressbar {
+                    color: $background-color;
+                    text-align: right;
+                    height: 100%;
+                    font-size: 14px;
+                    font-weight: bold;
+                  }
+                  
+                  .progressbar[title="level"] {
+                     background-color: $primary-color;
+                  }
+            }
+
+            .about-resume{
+                width: 100%;
+
+                .about-resume-top{
+                    margin-bottom: 60px;
+                }
+
+                .about-resume-top, .about-resume-bottom{
+                    width: 100%;
+                    padding-bottom: 60px;
+
+                    .about-resume-content{
+                        display: inline-block;
+                        width: 49%;
+                        margin: auto;
+                        text-align: center;
+                        position: relative;
+
+                        .content-border{
+
+                            width: 100px;
+                            height: 100px;
+                            padding: 15px;
+                            margin: auto;
+
+                            font-size: 15px;
+
+                            border: 10px double rgb(176, 178, 191,0.2);
+                            border-radius: 50%;
+
+                            z-index: 1;
+                            h5{
+                                font-size: 25px;
+                                font-weight: 900;
+                                color: $primary-color;
+                                margin-bottom: 0.2rem;
+                                margin-top: 0.2rem;
+                            }
+    
+                            p{
+                                color: $background-color;
+                                margin-top: 0.2rem;
+                            }
+                        }
+                        .content-img{
+                            background-color: rgb(255, 255, 255, 0.6);
+                            border-radius: 50%;
+                            box-shadow: 0 0 8px rgba(0,0,0,0.5), 0 0 0 10px rgba(255,255,255,0.4);
+                            position: absolute;
+                            top: 82%;
+                            left: 35%;
+                            z-index: 2;
+                            padding: 16px;
+                            img{ 
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+                        
+                    }   
+
                 }
             }
         }

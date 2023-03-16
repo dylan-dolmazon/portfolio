@@ -1,27 +1,59 @@
 @import "variables";
 
 /* Au niveau le plus haut du code */
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 990px) {
     .container{
         max-width: 1140px !important;
-    }
 
-    #left{
-        display: inline-block !important;
-        width: 50% !important;
-    }
+        #home-left{
+            display: inline-block !important;
+            width: 50% !important;
+        }
     
-    #right{
-        display: inline-block !important;
-        width: 36% ;
-        height: 8%;
-        margin: auto;
-        img{
-            padding: 10px;
-            border: $primary-color 10px solid;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
+        #home-right{
+            display: inline-block !important;
+            width: 36% ;
+            height: 8%;
+            margin: auto;
+            img{
+                padding: 10px;
+                border: $primary-color 10px solid;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        .about-left{
+            text-align: center;
+            display: inline-block !important;
+            width: 35%;
+            img{
+                width: 100% !important;
+                height: 100% !important;
+            }
+        }
+
+        .about-right{
+            display: inline-block !important;
+            width: 64%;
+            .top-right-skill, .top-left-skill, .bottom-right-skill, .bottom-left-skill{
+                margin-right: 1.5rem;
+                display: inline-block;
+                width: 45% !important;
+            }
+
+            .about-resume-top, .about-resume-bottom{
+            
+                display: inline-block !important;
+                width: 49% !important;
+
+                .about-resume-content{
+                    margin-left: 1px !important;
+                }
+                
+            }
+
         }
     }
 }
