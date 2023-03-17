@@ -40,7 +40,15 @@
                 width: 45% !important;
             }
         }
-
     }
 }
 
+@media screen and (600px <= width <= 950px) {
+
+    .container{
+        .content-item{
+            text-align: right !important;
+        }
+    }
+
+}
