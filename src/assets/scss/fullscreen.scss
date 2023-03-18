@@ -55,5 +55,84 @@
             }
 
         }
+
+        .navigation{
+
+            padding: 0 100px;
+        }
+
+        .experience-content{
+
+            .content-block{
+
+                position: relative;
+
+                margin: 20px;
+                display: flex;
+
+                .first-content-transition, .second-content-transition, .third-content-transition{
+                    display: inline-block !important;
+                    text-align: center;
+                    width: 30px;
+                    height: 100%;
+                    position: relative;
+
+                    span{
+                        content: "";
+                        display: block !important;
+                        border: 1px solid $background-color;
+                        position: absolute;
+                    }
+                }
+
+                .first-content-transition{
+                    span{
+                        display: block;
+                        top: 40px;
+                        left: 50%;
+                        height: 250px;
+                    }
+                }
+
+                .third-content-transition{
+                    span{
+                        display: block;
+                        top: 0;
+                        left: 50%;
+                        height: 35px;
+                    }
+                }
+
+                .second-content-transition{
+                    span{
+                        display: block;
+                        top: 0;
+                        left: 50%;
+                        height: 280px;
+                    }
+                }
+
+                .content-header{
+                    display: inline-block;
+                    width: 28%;
+                    text-align: right;
+                    padding-top: 25px;
+    
+                    h3{
+                        margin: 0 !important;
+                    }
+                }
+    
+                .description{
+                    display: inline-block;
+                    width: 60% !important;
+                }
+
+            }
+
+            
+
+        }
+
     }
 }

@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "gulp watch",
-    "minify": "gulp default"
+    "build": "gulp default"
   },
   "dependencies": {
     "aos": "^2.3.4",

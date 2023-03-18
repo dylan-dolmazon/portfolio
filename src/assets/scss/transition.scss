@@ -47,7 +47,11 @@
 
     .container{
         .content-item{
-            text-align: right !important;
+            
+            .content-header{
+                text-align: right !important;
+            }
+
         }
     }
 
