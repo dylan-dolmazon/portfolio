@@ -129,9 +129,19 @@
                 }
 
             }
+        }
 
-            
+        #filters{
+            margin: 0 30% 0 30%;
+        }
 
+        #gallery{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .gallery-content{
+            display: inline-block;
         }
 
     }
