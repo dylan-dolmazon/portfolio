@@ -54,13 +54,15 @@ function watch() {
 
 function defaut() {
     browserSync.init({
-        server: {
-          baseDir: './',
-          index: 'index.html'
-        }
-      });
-    gulp.series('min-js', 'css','minify-css','images');
+      server: {
+        baseDir: './',
+        index: 'index.html'
+      }
+    });
+  
+    return gulp.series('min-js', 'css', 'minify-css', 'images')();
 }
+  
 
 exports.watch = watch;
 exports.default = defaut;

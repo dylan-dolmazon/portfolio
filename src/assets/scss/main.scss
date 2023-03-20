@@ -64,6 +64,32 @@ body {
         margin-left: auto;
         margin-right: auto;
         padding: 20px;
+
+       .container-sub-title{
+            text-transform: uppercase;
+            font-size: 25px;
+        }
+
+        .container-title{
+            text-transform: uppercase;
+            font-size: 37px;
+
+            &::after{
+                margin: 20px auto; 
+                content: "";
+                display: block;
+                width: 100px;
+                height: 3px;
+            }
+        }
+
+        .container-text{
+            font-size: 15px;
+            line-height: 24px;
+            font-weight: 400;
+            letter-spacing: 0;
+            padding-bottom: 40px;
+        }
     }
     // design partie home
     #home{
@@ -327,37 +353,24 @@ body {
 
         margin-top: 60px;
         .container{
-            text-align: center;
-            h4{
+
+            .container-sub-title{
                 color: $primary-color;
-                text-transform: uppercase;
-                font-size: 25px;
             }
-
-            h2{
+    
+            .container-title{
                 color: $background-color;
-                text-transform: uppercase;
-                font-size: 37px;
-
+    
                 &::after{
-                    margin: 20px auto; 
-                    content: "";
-                    display: block;
-                    width: 100px;
-                    height: 3px;
                     background-color: $background-color;
                 }
             }
-
-            p{
-                font-size: 15px;
+    
+            .container-text{
                 color: $background-color;
-                line-height: 24px;
-                font-weight: 400;
-                letter-spacing: 0;
-                padding-bottom: 40px;
             }
 
+            text-align: center;
             .content {
                 .navigation{
                     display: flex;
@@ -444,6 +457,80 @@ body {
             }
 
         }
+    }
 
+    #projects{
+
+        background-color: $background-color;
+        .container{
+            text-align: center;
+
+            .container-sub-title{
+                color: $primary-color;
+            }
+    
+            .container-title{
+                color: $secondary-color;
+    
+                &::after{
+                    background-color: $secondary-color;
+                }
+            }
+    
+            .container-text{
+                color: $third-color;
+            }
+
+            #filters {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+              .button-nav {
+                padding: 10px;
+                border-radius: 5px;
+                cursor: pointer;
+                border-radius: 50px;
+                border: 1px solid #f2efef;
+
+                &.active{
+                    background-color: $primary-color;
+                    color: $background-color;
+                }
+
+                &.inactive{
+
+                background-color: $background-color;
+                color: $secondary-color;
+                }
+
+                &:hover {
+                  background-color: $primary-color;
+                  -webkit-transition: all 0.3s ease;
+                }
+              }
+            }
+
+            #gallery {
+
+                margin-top: 80px;
+
+                .inactive{
+                    width: 0;
+                    padding: 0;
+                    display: none;
+                }
+
+                .active{
+                    padding: 5px;
+                    display: block;
+
+                    img{
+                        margin: auto;
+                    }
+
+                }
+            }
+        }
     }
 }
