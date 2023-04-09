@@ -40,6 +40,7 @@
                 width: 45% !important;
             }
         }
+
     }
 }
 
@@ -65,6 +66,13 @@
 
         .gallery-content{
             display: inline-block;
+        }
+
+        .contact-data{
+            .data{
+                display: inline-block;
+                width: 18% !important;
+            }
         }
 
     }

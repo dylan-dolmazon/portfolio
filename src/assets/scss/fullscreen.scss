@@ -144,5 +144,24 @@
             display: inline-block;
         }
 
+        .contact-data{
+            .data{
+                display: inline-block;
+                width: 18% !important;
+            }
+        }
+
+        .contact-form{
+            display: inline-block;
+            width: 40% !important;
+            height: 200px;
+        }
+
+        .google-map{
+            display: inline-block;
+            width: 40% !important;
+            height: 200px;
+        }
+
     }
 }

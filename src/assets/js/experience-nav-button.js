@@ -10,7 +10,7 @@ btn_education.addEventListener('click', function() {
     addActive(btn_education,content_education);
     removeActive(btn_experiences,btn_test,content_experiences,content_test);
 });
-
+ 
 btn_experiences.addEventListener('click', function() {
     addActive(btn_experiences,content_experiences);
     removeActive(btn_education,btn_test,content_education,content_test);
