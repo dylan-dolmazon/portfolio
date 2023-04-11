@@ -10,8 +10,8 @@ body {
         opacity: 0.96;
         z-index: 99;
 
-        h2{
-            color: $fourth-color;
+        h2{ 
+            color: $primary-color;
         }
     }
 
@@ -76,7 +76,7 @@ body {
             align-items: center;
             padding: 20px;
             font-size: 16px;
-    
+
             a{
                 display: none;
             }
@@ -87,10 +87,15 @@ body {
                 list-style: none;
                 margin: 0;
                 padding: 0;
-    
+     
                 li {
-                display: inline-block;
-                margin-left: 30px;
+                    display: inline-block;
+                    margin-left: 30px;
+                    a{
+                        display: inline-block;
+                        text-decoration: none;
+                        color: #fff;
+                    }
                 }
             }
         }
@@ -837,7 +842,7 @@ footer {
         width: 2.5rem;
         height: 2.5rem;
         border-radius: 100%;
-        background-color: #6faaff;
+        background-color: $primary-color;
       }
       
       ul.social-icons li:hover a {
