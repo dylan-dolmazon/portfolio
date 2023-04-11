@@ -151,16 +151,19 @@
             }
         }
 
-        .contact-form{
-            display: inline-block;
-            width: 40% !important;
-            height: 200px;
-        }
-
-        .google-map{
-            display: inline-block;
-            width: 40% !important;
-            height: 200px;
+        .contact-infos{
+            display: flex !important;
+            text-align: center;
+            align-items: center;
+            .contact-form{
+                display: inline-block;
+                width: 40% !important;
+            }
+    
+            .google-map{
+                display: inline-block;
+                width: 40% !important;
+            }
         }
 
     }

@@ -410,54 +410,56 @@
                             <p>this is ther content</p>
                         </div>
                     </div>
-                    <div class="contact-form">
-                        <form class="form" id="contact-form" action="mail.php" method="POST">
-							<div class="contact-form-content">
-								<div class="row" data-aos="fade-right" data-aos-duration="1000">
-									<div class="form-line">
-										<div class="form-group">
-											<input id="name" type="text" name="name" placeholder="Your Name" required="required">
-										</div>
-									</div>
-									<div class="form-line">
-										<div class="form-group">
-											<input id="form_email" type="email" name="email" placeholder="Your Email" required="required">
-										</div>
-									</div>
-									<div class="form-line">
-										<div class="form-group wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
-											<input id="subject" type="text" name="subject" placeholder="Your Subject" required="required">
-										</div>
-									</div>
-									
-									<div class="form-line">
-										<div class="form-group">
-											<textarea id="message" name="message" placeholder="Your Message" rows="4" required="required"></textarea>
-										</div>
-									</div>
-									<div class="form-line">
-										<div class="atf-contact-btn">
-											<button type="submit" class="btn atf-themes-btn">Send Message</button>
-										</div>
-									</div>
-								</div>
-							</div>
-						</form>
-                    </div>
-                    <div class="google-map">
-                        <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
-                            <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
-                            var setting = {"height":527,"width":893,"zoom":14,"queryString":"Le Triadour, Saint-Hostien, France","place_id":"ChIJM5vVPpjy9UcRzzQJyAHT4GA","satellite":false,"centerCoord":[45.068869,4.067442999999988],"cid":"0x60e0d301c80934cf","lang":"fr","cityUrl":"/france/le-puy-en-velay-31716","cityAnchorText":"Carte de Le Puy-en-Velay, Sud de la France, France","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"910307"};
-                            var d = document;
-                            var s = d.createElement('script');
-                            s.src = 'https://1map.com/js/script-for-user.js?embed_id=910307';
-                            s.async = true;
-                            s.onload = function (e) {
-                              window.OneMap.initMap(setting)
-                            };
-                            var to = d.getElementsByTagName('script')[0];
-                            to.parentNode.insertBefore(s, to);
-                          })();</script><a href="https://1map.com/fr/map-embed">1 Map</a></div>
+                    <div class="contact-infos">
+                        <div class="contact-form"> 
+                            <form class="form" id="contact-form" action="./mail.php" method="POST">
+                                <div class="contact-form-content">
+                                    <div class="row" data-aos="fade-right" data-aos-duration="1000">
+                                        <div class="form-line">
+                                            <div class="form-group">
+                                                <input id="name" type="text" name="name" placeholder="Your Name" required="required">
+                                            </div>
+                                        </div>
+                                        <div class="form-line">
+                                            <div class="form-group">
+                                                <input id="form_email" type="email" name="email" placeholder="Your Email" required="required">
+                                            </div>
+                                        </div>
+                                        <div class="form-line">
+                                            <div class="form-group wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
+                                                <input id="subject" type="text" name="subject" placeholder="Your Subject" required="required">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-line">
+                                            <div class="form-group">
+                                                <textarea id="message" name="message" placeholder="Your Message" rows="4" required="required"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-line">
+                                            <div class="atf-contact-btn">
+                                                <button type="submit" class="btn atf-themes-btn">Send Message</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="google-map">
+                            <div id="wrapper-9cd199b9cc5410cd3b1ad21cab2e54d3">
+                                <div id="map-9cd199b9cc5410cd3b1ad21cab2e54d3"></div><script>(function () {
+                                var setting = {"height":527,"width":893,"zoom":14,"queryString":"Le Triadour, Saint-Hostien, France","place_id":"ChIJM5vVPpjy9UcRzzQJyAHT4GA","satellite":false,"centerCoord":[45.068869,4.067442999999988],"cid":"0x60e0d301c80934cf","lang":"fr","cityUrl":"/france/le-puy-en-velay-31716","cityAnchorText":"Carte de Le Puy-en-Velay, Sud de la France, France","id":"map-9cd199b9cc5410cd3b1ad21cab2e54d3","embed_id":"910307"};
+                                var d = document;
+                                var s = d.createElement('script');
+                                s.src = 'https://1map.com/js/script-for-user.js?embed_id=910307';
+                                s.async = true;
+                                s.onload = function (e) {
+                                window.OneMap.initMap(setting)
+                                };
+                                var to = d.getElementsByTagName('script')[0];
+                                to.parentNode.insertBefore(s, to);
+                            })();</script><a href="https://1map.com/fr/map-embed">1 Map</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -469,5 +471,5 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
-  </script>
+</script>
 </html>
