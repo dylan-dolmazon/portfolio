@@ -47,6 +47,10 @@
 @media screen and (600px <= width <= 990px) {
 
     .container{
+        #test{
+            display: inline-block !important; 
+        }
+
         .content-item{
             
             .content-header{

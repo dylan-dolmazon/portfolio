@@ -415,7 +415,6 @@ body {
             text-align: center;
             .content {
                 .navigation{
-                    display: flex;
 
                     .active{
                         background-color: $background-color;
@@ -434,6 +433,10 @@ body {
                         font-weight: 500;
                         text-transform: capitalize;
                         cursor: pointer;
+                    }
+                    #test{
+                        margin: 5px auto 0 auto;
+                        display: block ; 
                     }
                 }
 

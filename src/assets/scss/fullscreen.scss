@@ -5,6 +5,10 @@
     .container{
         max-width: 1140px !important;
 
+        #test{
+            display: inline-block !important; 
+        }
+
         #home-left{
             display: inline-block !important;
             width: 50% !important;
