@@ -1,5 +1,7 @@
 # Dylan DOLMAZON
 
+https://portfolio-dylan-dolmazon.000webhostapp.com/
+
 | Rôle                   | Nom                | Email                            | 
 |------------------------|--------------------|----------------------------------|
 | Dev.Front, Intégrateur | **Dolmazon Dylan** | dylan.dolmazon@icloud.com        |  
@@ -70,3 +72,5 @@ html-css-metinet
 ## Les pratiques 
 
 Le site web à été développé en mobile first. Les fichiers js et scss sont séparé celon différents critéres et sont ensuite regroupés et minifier par Gulp dans un fichier [css/js].min.[css/js]. De même pour les images qui sont déplacés de src vers dist.
+
+Mon portfolio est hébergé sur 000Webhost.com qui m'a permit un hébergement facile et gratuit. 
