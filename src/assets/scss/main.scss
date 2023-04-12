@@ -244,16 +244,16 @@ body {
 
     #about{
         .container{
+            margin-top: 60px; 
             .about-left{
                 display: block;
-
                 img{
                     width: 100%;
                     height: 100%;
                 }
             }
             .about-right{
-                display: block;
+                display: block; 
 
                 h2{
                     color: $primary-color;
@@ -578,7 +578,6 @@ body {
                 .gallery-content{
 
                     overflow: hidden;
-
                     @keyframes moveDown {
                         0% {
                           transform: translateY(-100%);
@@ -621,7 +620,7 @@ body {
                     }
 
                     p, h3{
-                        color: $background-color;
+                        color: white;
                     }
 
                     .gallery-content-over{
