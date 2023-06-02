@@ -6,6 +6,9 @@ document.getElementById('contact-form').addEventListener('submit', function(even
 
     const form_message = document.getElementById('contact-form-message');
 
+    const submitbutton = document.getElementById('submit-button');
+    submitbutton.style.backgroundColor = "#3498db";
+    submitbutton.style.color = "#2D3436";
 
     // Récupérer les valeurs des champs du formulaire
     const name = document.getElementById('name').value;
@@ -40,7 +43,9 @@ document.getElementById('contact-form').addEventListener('submit', function(even
           // Supprimer le spinner
           spinner.classList.remove('ld', 'ld-spinner', 'ld-spin', 'spinner');
 
-          // Sélectionner l'élément <p>
+          // Changer la couleur du bouton
+          submitbutton.style.backgroundColor = "#ffffff";
+          submitbutton.style.color = "#3498db";
 
           // Ajouter du contenu à l'élément <p>
           form_message.style.color = 'green';
