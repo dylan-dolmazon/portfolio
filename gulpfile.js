@@ -44,7 +44,8 @@ function watch() {
       server: {
         baseDir: './',
         index: 'index.html'
-      }
+      },
+      files: ['mail.php'] // Ajoutez le chemin vers mail.php ici
     });
     gulp.watch('src/assets/js/*.js', gulp.series('min-js'));
     gulp.watch('src/assets/scss/*.scss', gulp.series('css','minify-css'));
