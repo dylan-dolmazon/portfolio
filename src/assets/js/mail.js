@@ -1,6 +1,12 @@
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); // Empêche le comportement par défaut du formulaire (rechargement de la page)
   
+    const spinner = document.getElementById('mySpinner');
+    spinner.classList.add('ld', 'ld-spinner', 'ld-spin', 'spinner');
+
+    const form_message = document.getElementById('contact-form-message');
+
+
     // Récupérer les valeurs des champs du formulaire
     const name = document.getElementById('name').value;
     const email = document.getElementById('form_email').value;
@@ -30,20 +36,42 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     })
       .then(function(response) {
         if (response.ok) {
-          // Réponse du serveur
-          console.log('E-mail envoyé avec succès !');
-          // Afficher un message de succès à l'utilisateur
-          alert('Votre message a été envoyé avec succès !');
+          
+          // Supprimer le spinner
+          spinner.classList.remove('ld', 'ld-spinner', 'ld-spin', 'spinner');
+
+          // Sélectionner l'élément <p>
+
+          // Ajouter du contenu à l'élément <p>
+          form_message.style.color = 'green';
+          form_message.textContent = 'Email envoyé';
+
           // Réinitialiser le formulaire
           document.getElementById('contact-form').reset();
+
+          // Supprimer le contenu après 5 secondes
+          setTimeout(function() {
+            form_message.textContent = '';
+          }, 5000);
         } else {
           // Erreur lors de l'envoi de l'e-mail
-          console.error('Une erreur s\'est produite lors de l\'envoi de l\'e-mail.');
+           // Ajouter du contenu à l'élément <p>
+           form_message.style.color = 'red';
+           form_message.textContent = "Une erreur est survenu lors de l'envoi";
+           // Supprimer le contenu après 5 secondes
+          setTimeout(function() {
+            form_message.textContent = '';
+          }, 5000);
         }
       })
       .catch(function(error) {
-        // Erreur lors de la requête fetch
-        console.error('Une erreur s\'est produite lors de l\'envoi de l\'e-mail :', error);
+         // Ajouter du contenu à l'élément <p>
+         form_message.style.color = 'red';
+         form_message.textContent = "Une erreur est survenu lors de l'envoi";
+         // Supprimer le contenu après 5 secondes
+        setTimeout(function() {
+          form_message.textContent = '';
+        }, 5000)
       });
   });
   

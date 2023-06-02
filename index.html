@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sono"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/loadingio/loading.css@v2.0.0/dist/loading.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
 </head>
 <body>
     <header>
@@ -319,63 +321,63 @@
                     <div id="autre" class="inactive button-nav">Autre et frameworks</div>
                 </div>
                 <div id="gallery">
-                    <div class="active gallery-content aos-animate aos-init" data-aos="fade-right" data-aos-duration="1000" data-php>
+                    <div class="active gallery-content" data-php>
                         <img src="dist/img/monopoly.jpeg" alt="projects image">
                         <div class="gallery-content-over">
                             <p>https://github.com/dylan-dolmazon/Mon-hop-au-lit</p>
                             <h3>Mon'Hop au lit</h3>
                         </div>
                     </div>
-                    <div  class="active gallery-content aos-animate aos-init" data-aos="fade-up" data-aos-duration="1000" data-php>
+                    <div  class="active gallery-content" data-php>
                         <img src="dist/img/spotify.jpeg" alt="projects image">
                         <div class="gallery-content-over">
                             <p>https://github.com/dylan-dolmazon/symfony-spotify</p>
                             <h3>Catalogue spotify</h3>
                         </div>
                     </div>
-                    <div  class="active gallery-content aos-animate aos-init" data-aos="fade-right" data-aos-duration="1000" data-javascript>
+                    <div  class="active gallery-content" data-javascript>
                         <img src="dist/img/discord-bot.png" alt="projects image">
                         <div class="gallery-content-over">
                             <p>https://github.com/dylan-dolmazon/javascript-bot-discord</p>
                             <h3>Bot discord</h3>
                         </div>
                     </div>
-                    <div  class="active gallery-content aos-animate aos-init" data-aos="fade-right" data-aos-duration="1000" data-javascript>
+                    <div  class="active gallery-content" data-javascript>
                         <img src="dist/img/api-js.png" alt="projects image">
                         <div class="gallery-content-over">
                             <p>https://github.com/dylan-dolmazon/javascript-api</p>
                             <h3>Api crée en javascript</h3>
                         </div>
                     </div>
-                    <div  class="active gallery-content aos-animate aos-init" data-aos="fade-up" data-aos-duration="1000" data-html>
+                    <div  class="active gallery-content" data-html>
                         <img src="dist/img/html-css.jpeg" alt="projects image">
                         <div class="gallery-content-over">
                             <p>https://github.com/dylan-dolmazon/html-css-website</p>
                             <h3>HTML / CSS / BOOTSTRAP</h3>
                         </div>
                     </div>
-                    <div  class="active gallery-content aos-animate aos-init" data-aos="fade-left" data-aos-duration="1000" data-html>
+                    <div  class="active gallery-content" data-html>
                         <img src="dist/img/monkeyfactory.png" alt="projects image">
                         <div class="gallery-content-over">
                             <p>https://github.com/dylan-dolmazon/integration_web_MonkeyFactory</p>
                             <h3>HTML / CSS / JS </h3>
                         </div>
                     </div>
-                    <div  class="active gallery-content aos-animate aos-init" data-aos="fade-right" data-aos-duration="1000" data-autre>
+                    <div  class="active gallery-content " data-autre>
                         <img src="dist/img/vuejs.png" alt="projects image">
                         <div class="gallery-content-over">
                             <p>https://github.com/dylan-dolmazon/vueJs_viteJs_collection</p>
                             <h3>VUEJS / VITEJS</h3>
                         </div>
                     </div>
-                    <div  class="active gallery-content aos-animate aos-init" data-aos="fade-up" data-aos-duration="1000" data-autre>
+                    <div  class="active gallery-content " data-autre>
                         <img src="dist/img/messenger.png" alt="projects image">
                         <div class="gallery-content-over">
                             <p>https://github.com/dylan-dolmazon/Messenger-front</p>
                             <h3>Messenger vue/vite JS</h3>
                         </div>
                     </div>
-                    <div  class="active gallery-content aos-animate aos-init" data-aos="fade-left" data-aos-duration="1000" data-autre>
+                    <div  class="active gallery-content" data-autre>
                         <img src="dist/img/django.png" alt="projects image">
                         <div class="gallery-content-over">
                             <p>https://gitlab.com/dylan.dolmazon/evaluation-perceptuelle</p>
@@ -438,9 +440,13 @@
                                             </div>
                                         </div>
                                         <div class="form-line">
-                                            <div class="atf-contact-btn">
-                                                <button id="contact-form" type="submit" class="btn atf-themes-btn">Send Message</button>
-                                            </div>
+                                            <!-- sample html for this button-->
+                                            <button type="submit" class="button running ld ld-ext-right">
+                                                Send email
+                                                <div id="mySpinner"></div>
+                                                <i class="fa fa-envelope-o"></i>
+                                            </button>
+                                            <p id="contact-form-message"></p>
                                         </div>
                                     </div>
                                 </div>

@@ -64,13 +64,22 @@
         }
 
         #gallery{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex !important;
+            flex-wrap: wrap;
+
+            .gallery-content{
+                flex-basis: 42%;
+                display: flex !important;
+                align-items: stretch;
+
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
         }
 
-        .gallery-content{
-            display: inline-block;
-        }
+        
 
         .contact-data{
             .data{

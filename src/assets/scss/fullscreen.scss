@@ -142,12 +142,19 @@
         }
 
         #gallery{
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-        }
+            display: flex !important;
+            flex-wrap: wrap;
 
-        .gallery-content{
-            display: inline-block;
+            .gallery-content{
+                flex-basis: 29%;
+                display: flex !important;
+                align-items: stretch;
+
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
         }
 
         .contact-data{
